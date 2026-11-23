@@ -1,0 +1,867 @@
+/* ==========================================================================
+   1. DESIGN TOKENS & REGAL DEEP BLUE PALETTE
+   ========================================================================== */
+:root {
+  --navy-950: #07111F;
+  --navy-900: #0C1E38;
+  --navy-800: #15315B;
+  --navy-700: #1E447D;
+  --navy-100: #E8EEF7;
+  --navy-50:  #F3F6FB;
+
+  --bg-page:     #F6F8FC;
+  --bg-surface:  #FFFFFF;
+  --text-main:   #1A2433;
+  --text-muted:  #4E5D73;
+  --border-soft: #DCE4F0;
+
+  --accent-gold: #B88E28;
+  --accent-gold-soft: rgba(184, 142, 40, 0.14);
+
+  /* Swap in your custom fonts here */
+  --font-display: 'Plus Jakarta Sans', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-body:    'Inter', 'Noto Sans JP', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --container-max: 1080px;
+  --radius-lg: 14px;
+  --radius-md: 10px;
+  --shadow-card: 0 4px 20px rgba(12, 30, 56, 0.05);
+  --shadow-hover: 0 12px 28px rgba(12, 30, 56, 0.10);
+  --ease-regal: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ==========================================================================
+   2. RESET & BASE STYLES
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0 1.5rem 4rem;
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: var(--font-body);
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  border-top: 5px solid var(--navy-900);
+}
+
+a {
+  color: var(--navy-700);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(30, 68, 125, 0.3);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+a:hover {
+  color: var(--navy-950);
+  border-bottom-color: var(--accent-gold);
+}
+
+/* Language Toggle Visibility */
+[data-lang="en"] {
+  display: none;
+}
+body.lang-en [data-lang="en"] {
+  display: revert;
+}
+body.lang-en [data-lang="jp"] {
+  display: none;
+}
+
+/* ==========================================================================
+   3. CONTAINER, HEADER & STICKY NAVIGATION BAR
+   ========================================================================== */
+header,
+nav,
+#hero-intro,
+#lessons,
+#teaching-proficiency,
+#basic-info,
+#rates,
+#inquiry {
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+header {
+  position: relative;
+  margin-top: 1.75rem;
+  margin-bottom: 1rem;
+  padding: 2.5rem 2.5rem;
+  background: linear-gradient(135deg, var(--navy-950) 0%, var(--navy-900) 60%, var(--navy-800) 100%);
+  color: #FFFFFF;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  overflow: hidden;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  top: -40%;
+  right: -8%;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 255, 255, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+header h1 {
+  margin: 0;
+  padding-right: 9.5rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 3vw, 2.2rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.3;
+}
+
+#lang-toggle {
+  position: absolute;
+  top: 2.1rem;
+  right: 2.1rem;
+  z-index: 2;
+  padding: 0.5rem 1.15rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+  transition: background-color 0.25s var(--ease-regal),
+              color 0.25s var(--ease-regal),
+              transform 0.2s var(--ease-regal);
+}
+
+#lang-toggle:hover {
+  background-color: #FFFFFF;
+  color: var(--navy-900);
+  transform: translateY(-2px);
+}
+
+#lang-toggle:active {
+  transform: scale(0.97);
+}
+
+/* Navigation Pill Bar */
+nav {
+  position: sticky;
+  top: 0.75rem;
+  z-index: 20;
+  margin-bottom: 1.75rem;
+  padding: 0.55rem 1rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--border-soft);
+  border-radius: 999px;
+  box-shadow: 0 6px 20px rgba(12, 30, 56, 0.06);
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.35rem 0.65rem;
+}
+
+nav li {
+  margin: 0;
+  padding: 0;
+}
+
+nav li::before {
+  display: none;
+}
+
+nav a {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-bottom: none;
+  border-radius: 999px;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy-900);
+  transition: background-color 0.22s var(--ease-regal),
+              color 0.22s var(--ease-regal),
+              transform 0.2s var(--ease-regal);
+}
+
+nav a:hover {
+  background-color: var(--navy-900);
+  color: #FFFFFF;
+  transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   4. HERO INTRO (SIDE-BY-SIDE PORTRAIT & GREETINGS ON DESKTOP)
+   ========================================================================== */
+#hero-intro {
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  gap: 1.75rem;
+  align-items: stretch;
+  margin-bottom: 1.75rem;
+}
+
+#profile-picture,
+#bio,
+#lessons,
+#teaching-proficiency,
+#basic-info,
+#rates,
+#inquiry {
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  transition: transform 0.35s var(--ease-regal),
+              box-shadow 0.35s var(--ease-regal),
+              border-color 0.35s var(--ease-regal);
+}
+
+#lessons,
+#teaching-proficiency,
+#basic-info,
+#rates,
+#inquiry {
+  padding: 2.25rem 2.5rem;
+  margin-bottom: 1.75rem;
+}
+
+#bio:hover,
+#lessons:hover,
+#teaching-proficiency:hover,
+#basic-info:hover,
+#rates:hover,
+#inquiry:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: #C3D2E8;
+}
+
+/* Original Aspect Ratio Portrait Card */
+#profile-picture {
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(160deg, var(--navy-50) 0%, #FFFFFF 100%);
+}
+
+#profile-picture img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+  box-shadow: 0 8px 22px rgba(12, 30, 56, 0.14);
+  transition: transform 0.4s var(--ease-regal), box-shadow 0.4s var(--ease-regal);
+}
+
+#profile-picture:hover img {
+  transform: scale(1.025);
+  box-shadow: 0 12px 28px rgba(12, 30, 56, 0.2);
+}
+
+#bio {
+  padding: 2.1rem 2.4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* ==========================================================================
+   5. HEADINGS & SCANNABLE TYPOGRAPHY
+   ========================================================================== */
+h2 {
+  position: relative;
+  margin-top: 0;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.55rem;
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  border-bottom: 1px solid var(--border-soft);
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 52px;
+  height: 3px;
+  background-color: var(--navy-800);
+  border-radius: 2px;
+  transition: width 0.35s var(--ease-regal), background-color 0.35s var(--ease-regal);
+}
+
+section:hover h2::after,
+div:hover > div > h2::after {
+  width: 84px;
+  background-color: var(--accent-gold);
+}
+
+h3 {
+  margin-top: 1.65rem;
+  margin-bottom: 0.85rem;
+  font-family: var(--font-display);
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--navy-800);
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  color: var(--text-main);
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
+/* Clean Bullet Lists */
+ul {
+  margin: 0 0 1.25rem;
+  padding-left: 0;
+  list-style: none;
+}
+
+ul li {
+  position: relative;
+  padding-left: 1.15rem;
+  margin-bottom: 0.5rem;
+  transition: transform 0.2s var(--ease-regal), color 0.2s var(--ease-regal);
+}
+
+ul li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: var(--navy-700);
+  transition: background-color 0.2s var(--ease-regal), transform 0.2s var(--ease-regal);
+}
+
+ul li:hover {
+  transform: translateX(3px);
+  color: var(--navy-950);
+}
+
+ul li:hover::before {
+  background-color: var(--accent-gold);
+  transform: scale(1.3);
+}
+
+/* ==========================================================================
+   6. INTERACTIVE ICON CARDS & SPECIALTIES GRID
+   ========================================================================== */
+
+/* 4-Column Target Student Cards */
+.target-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.target-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 1.25rem 0.9rem;
+  background-color: var(--navy-50);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  transition: transform 0.28s var(--ease-regal),
+              background-color 0.28s var(--ease-regal),
+              border-color 0.28s var(--ease-regal),
+              box-shadow 0.28s var(--ease-regal);
+}
+
+.target-card img {
+  width: 46px;
+  height: 46px;
+  object-fit: contain;
+  margin-bottom: 0.65rem;
+  transition: transform 0.3s var(--ease-regal);
+}
+
+.target-card h4 {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--navy-900);
+  line-height: 1.35;
+}
+
+.target-card:hover {
+  transform: translateY(-4px);
+  background-color: #FFFFFF;
+  border-color: var(--navy-700);
+  box-shadow: 0 8px 20px rgba(12, 30, 56, 0.08);
+}
+
+.target-card:hover img {
+  transform: scale(1.12) rotate(-3deg);
+}
+
+/* Goals 2-Column Scannable Grid on Desktop */
+.goals-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.45rem 1.75rem;
+}
+
+.section-callout {
+  display: inline-block;
+  padding: 0.45rem 1rem;
+  background-color: var(--navy-100);
+  color: var(--navy-900);
+  font-weight: 700;
+  border-radius: 6px;
+  font-size: 0.95rem;
+}
+
+/* Lesson Specialties Header & Mobile Carousel Controls */
+.specialty-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 1.75rem;
+  margin-bottom: 0.85rem;
+}
+
+.specialty-header h3 {
+  margin: 0;
+}
+
+.carousel-controls {
+  display: none; /* Shown only on phone breakpoint where carousel activates */
+  gap: 0.45rem;
+}
+
+.carousel-btn {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  border: 1px solid var(--border-soft);
+  background-color: var(--navy-50);
+  color: var(--navy-900);
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease;
+}
+
+.carousel-btn:hover {
+  background-color: var(--navy-900);
+  color: #FFFFFF;
+}
+
+.carousel-btn:active {
+  transform: scale(0.94);
+}
+
+/* 2x2 Specialty Cards on Desktop & Tablet */
+.specialty-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.15rem;
+  margin-bottom: 1.25rem;
+}
+
+.specialty-card {
+  padding: 1.35rem 1.4rem;
+  background-color: var(--bg-page);
+  border: 1px solid var(--border-soft);
+  border-radius: var(--radius-md);
+  transition: transform 0.28s var(--ease-regal),
+              background-color 0.28s var(--ease-regal),
+              border-color 0.28s var(--ease-regal),
+              box-shadow 0.28s var(--ease-regal);
+}
+
+.specialty-card:hover {
+  transform: translateY(-3px);
+  background-color: #FFFFFF;
+  border-color: var(--navy-700);
+  box-shadow: 0 8px 22px rgba(12, 30, 56, 0.08);
+}
+
+.specialty-title {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 0.75rem;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid var(--border-soft);
+}
+
+.specialty-title img {
+  width: 36px;
+  height: 36px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.3s var(--ease-regal);
+}
+
+.specialty-card:hover .specialty-title img {
+  transform: scale(1.12);
+}
+
+.specialty-title strong {
+  font-family: var(--font-display);
+  font-size: 1.02rem;
+  color: var(--navy-900);
+}
+
+.specialty-card ul {
+  margin-bottom: 0;
+  font-size: 0.93rem;
+}
+
+.section-note {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+/* Two-Column Split for Experience & Locations/Schedule */
+.two-col-split {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.75rem;
+}
+
+.two-col-split h3:first-child {
+  margin-top: 0;
+}
+
+/* ==========================================================================
+   7. TABLES, INLINE ICON ROWS & COLLAPSIBLE PERSONAL TRIVIA
+   ========================================================================== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.75rem;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+}
+
+th {
+  background-color: var(--navy-900);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-weight: 600;
+  text-align: left;
+  padding: 0.85rem 1.15rem;
+  font-size: 0.92rem;
+}
+
+td {
+  padding: 0.85rem 1.15rem;
+  border-bottom: 1px solid var(--border-soft);
+  vertical-align: top;
+  font-size: 0.95rem;
+  transition: background-color 0.2s ease;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+tr:hover td {
+  background-color: var(--navy-50);
+}
+
+td:first-child {
+  font-weight: 600;
+  color: var(--navy-900);
+  width: 28%;
+}
+
+/* Inline Icon Rows in Basic Info Table */
+.icon-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.icon-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  transition: transform 0.2s var(--ease-regal);
+}
+
+.icon-row:hover {
+  transform: translateX(4px);
+}
+
+.icon-row img {
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
+  transition: transform 0.25s var(--ease-regal);
+}
+
+.icon-row:hover img {
+  transform: scale(1.15);
+}
+
+/* Wrap Meridian JPEG in a clean circle while keeping transparent PNGs untouched */
+img[src*="meridian"] {
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1.5px solid var(--border-soft);
+  background-color: #FFFFFF;
+}
+
+/* Collapsible Personal Trivia (<details>) */
+.trivia-toggle summary {
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.35rem 0.85rem;
+  font-family: var(--font-display);
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--navy-800);
+  background-color: var(--navy-100);
+  border-radius: 999px;
+  list-style: none;
+  user-select: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.trivia-toggle summary::-webkit-details-marker {
+  display: none;
+}
+
+.trivia-toggle summary::before {
+  content: "+";
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.trivia-toggle[open] summary::before {
+  content: "−";
+}
+
+.trivia-toggle summary:hover {
+  background-color: var(--navy-900);
+  color: #FFFFFF;
+}
+
+.trivia-toggle ul {
+  margin-top: 0.85rem;
+  margin-bottom: 0;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE BREAKPOINTS (TABLET & PHONE)
+   ========================================================================== */
+
+/* --- TABLET (641px to 992px) --- */
+@media (max-width: 992px) {
+  body {
+    padding: 0 1.25rem 3rem;
+  }
+
+  nav {
+    border-radius: var(--radius-md);
+  }
+
+  #hero-intro {
+    grid-template-columns: 210px 1fr;
+    gap: 1.25rem;
+  }
+
+  #lessons,
+  #teaching-proficiency,
+  #basic-info,
+  #rates,
+  #inquiry {
+    padding: 1.85rem 1.85rem;
+  }
+
+  .goals-list,
+  .two-col-split {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  td:first-child {
+    width: 34%;
+  }
+}
+
+/* --- PHONE (640px and below) --- */
+@media (max-width: 640px) {
+  body {
+    padding: 0 0.85rem 2.5rem;
+    font-size: 0.94rem;
+  }
+
+  header {
+    margin-top: 1.15rem;
+    padding: 1.65rem 1.25rem;
+  }
+
+  #lang-toggle {
+    position: static;
+    margin-bottom: 0.9rem;
+    padding: 0.42rem 0.95rem;
+    font-size: 0.8rem;
+  }
+
+  header h1 {
+    padding-right: 0;
+    font-size: 1.45rem;
+  }
+
+  /* Compact Horizontal Scroll Nav on Phone */
+  nav {
+    top: 0.5rem;
+    padding: 0.45rem 0.65rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  nav ul {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    gap: 0.35rem;
+  }
+
+  nav a {
+    white-space: nowrap;
+    font-size: 0.82rem;
+    padding: 0.32rem 0.75rem;
+  }
+
+  /* Stack Portrait & Greetings on Phone */
+  #hero-intro {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #profile-picture img {
+    max-width: 220px;
+  }
+
+  #bio,
+  #lessons,
+  #teaching-proficiency,
+  #basic-info,
+  #rates,
+  #inquiry {
+    padding: 1.4rem 1.2rem;
+    margin-bottom: 1.25rem;
+    border-radius: 10px;
+  }
+
+  /* 2x2 Target Grid on Phone */
+  .target-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.75rem;
+  }
+
+  /* Activate Horizontal Carousel + Arrows for Lesson Specialties on Phone */
+  .carousel-controls {
+    display: flex;
+  }
+
+  .specialty-grid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 0.85rem;
+    padding-bottom: 0.5rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .specialty-card {
+    flex: 0 0 85%;
+    scroll-snap-align: start;
+  }
+
+  /* Stack Table Rows on Phone */
+  table,
+  tbody,
+  tr,
+  td {
+    display: block;
+    width: 100%;
+  }
+
+  tr:first-child:has(th) {
+    display: none;
+  }
+
+  tr {
+    border-bottom: 1px solid var(--border-soft);
+    padding: 0.75rem 0;
+  }
+
+  tr:last-child {
+    border-bottom: none;
+  }
+
+  td {
+    border-bottom: none;
+    padding: 0.25rem 0.65rem;
+  }
+
+  td:first-child {
+    width: 100%;
+    color: var(--navy-800);
+    font-size: 0.82rem;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+    padding-bottom: 0.15rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

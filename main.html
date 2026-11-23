@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <title>Gab-sensei | Private English Tutoring</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <header>
+        <button id="lang-toggle" type="button">English / 日本語</button>
+        <h1 data-lang="jp">ガブ先生のページへようこそ！</h1>
+        <h1 data-lang="en">Welcome to Gab-sensei's page!</h1>
+    </header>
+
+    <nav aria-label="Section navigation">
+        <ul data-lang="jp">
+            <li><a href="#hero-intro">ごあいさつ</a></li>
+            <li><a href="#lessons">レッスン内容</a></li>
+            <li><a href="#teaching-proficiency">指導経験・資格</a></li>
+            <li><a href="#basic-info">基本情報</a></li>
+            <li><a href="#rates">場所・料金</a></li>
+            <li><a href="#inquiry">お問い合わせ</a></li>
+        </ul>
+        <ul data-lang="en">
+            <li><a href="#hero-intro">Greetings</a></li>
+            <li><a href="#lessons">Lessons</a></li>
+            <li><a href="#teaching-proficiency">Experience</a></li>
+            <li><a href="#basic-info">Profile</a></li>
+            <li><a href="#rates">Rates &amp; Details</a></li>
+            <li><a href="#inquiry">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section id="hero-intro">
+        <div id="profile-picture">
+            <img src="assets/profile.JPG" alt="Gabriel Pascua Alteza">
+        </div>
+
+        <div id="bio">
+            <article data-lang="jp">
+                <h2>ごあいさつ</h2>
+                <p>こんにちは！ガブリエルと申します。</p>
+                <p>日本在住5年目で、現在は名古屋大学大学院の工学研究科に在籍しながら、フリーランスで英語指導を行っています。<strong>日常会話やネイティブ思考のスピーキング</strong>から、<strong>各種試験対策</strong>（TOEIC / TOEFL / IELTS / 英検）、<strong>基礎英文法の学び直し</strong>まで幅広くサポートしています。</p>
+                <p>日常会話を楽しみたい方から本格的な留学準備まで、<strong>目的やレベルを問わず</strong>大歓迎です！</p>
+                <p>大学では留学生団体の代表としてイベント企画や国際交流に携わっており、多様なバックグラウンドを持つ方々とコミュニケーションをとってきました。レッスンは<strong>リラックスした雰囲気</strong>で、生徒さん一人ひとりの<strong>ペースに合わせて</strong>進めます。まずは気軽にお問い合わせください。どうぞよろしくお願いいたします！</p>
+            </article>
+
+            <article data-lang="en">
+                <h2>Greetings!</h2>
+                <p>Hello! My name is Gabriel.</p>
+                <p>I am currently in my fifth year living in Japan and pursuing a Master's degree at the Graduate School of Engineering, Nagoya University, while working as a freelance English instructor. I offer comprehensive support ranging from <strong>everyday conversation and native-style speaking</strong> to <strong>standardized test preparation</strong> (TOEIC / TOEFL / IELTS / Eiken) and <strong>foundational English grammar review</strong>.</p>
+                <p>Whether you want to enjoy casual conversation or prepare seriously for studying abroad, students of <strong>all goals and proficiency levels</strong> are welcome!</p>
+                <p>At university, I served as the leader of an international student organization, planning events and communicating with people from diverse cultural backgrounds. My lessons have a <strong>relaxed atmosphere</strong> and are tailored to each student's <strong>individual pace</strong>. Please feel free to reach out anytime; I look forward to meeting you!</p>
+            </article>
+        </div>
+    </section>
+
+    <div id="lessons">
+        <div data-lang="jp">
+            <h2>提供レッスン内容</h2>
+            <h3>対象者</h3>
+            <div class="target-grid">
+                <div class="target-card">
+                    <img src="assets/blocks.png" alt="幼児・未就学児">
+                    <h4>幼児・未就学児</h4>
+                </div>
+                <div class="target-card">
+                    <img src="assets/school-bag.png" alt="小学生・中学生・高校生">
+                    <h4>小学生〜高校生</h4>
+                </div>
+                <div class="target-card">
+                    <img src="assets/graduation-cap.png" alt="大学生・大学院生">
+                    <h4>大学生・大学院生</h4>
+                </div>
+                <div class="target-card">
+                    <img src="assets/briefcase.png" alt="社会人">
+                    <h4>社会人</h4>
+                </div>
+            </div>
+
+            <h3>こんなお悩み・目標に</h3>
+            <ul class="goals-list">
+                <li><strong>学校の宿題や授業</strong>についていくのが大変</li>
+                <li>初心者で、英語を話すことに<strong>まだ自信がない・緊張してしまう</strong></li>
+                <li>楽しく<strong>英会話</strong>を続けたい</li>
+                <li>ネイティブのような<strong>自然な英文法感覚</strong>を身につけたい</li>
+                <li><strong>留学や海外旅行</strong>を控えている、または<strong>帰国子女</strong>で英語力を維持したい</li>
+                <li>理系・工学分野での<strong>アカデミック英語・ビジネス英語</strong>を学びたい</li>
+                <li>対面・オンラインを問わず、<strong>柔軟なスケジュール</strong>で受講したい</li>
+            </ul>
+            <p class="section-callout">目標に合わせて一緒に解決していきましょう！</p>
+
+            <div class="specialty-header">
+                <h3>得意なレッスン内容</h3>
+                <div class="carousel-controls" aria-label="Slide controls">
+                    <button type="button" class="carousel-btn prev" aria-label="前へ">&#8592;</button>
+                    <button type="button" class="carousel-btn next" aria-label="次へ">&#8594;</button>
+                </div>
+            </div>
+            <div class="specialty-grid">
+                <div class="specialty-card">
+                    <div class="specialty-title">
+                        <img src="assets/exam.png" alt="資格・試験対策">
+                        <strong>資格・試験対策</strong>
+                    </div>
+                    <ul>
+                        <li>中高生向けの英語検定対策（英検）</li>
+                        <li>上級英語資格試験対策（TOEIC、TOEFL、IELTS、Duolingo English Test）</li>
+                        <li>大学受験・海外大学進学対策（SAT）</li>
+                    </ul>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-title">
+                        <img src="assets/friend.png" alt="英会話・スピーキング">
+                        <strong>英会話・スピーキング</strong>
+                    </div>
+                    <ul>
+                        <li>日常英会話・フリートーク（自然な表現やスラング・イディオムを含む）</li>
+                        <li>旅行英会話</li>
+                        <li>発音矯正</li>
+                    </ul>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-title">
+                        <img src="assets/table.png" alt="宿題・学校学習サポート">
+                        <strong>宿題・学校学習サポート</strong>
+                    </div>
+                    <ul>
+                        <li>ドリルや課題のサポート</li>
+                        <li>定期試験対策・学校の教科書の復習</li>
+                        <li>英作文（エッセイ）添削</li>
+                    </ul>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-title">
+                        <img src="assets/salute.png" alt="オーダーメイドカリキュラム">
+                        <strong>オーダーメイドカリキュラム</strong>
+                    </div>
+                    <ul>
+                        <li>基礎英文法から丁寧に指導する個別プラン作成</li>
+                        <li>英文法トレーニング</li>
+                        <li>学習の進捗管理</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="section-note">リストにない内容をご希望の場合も、ぜひお気軽にお問い合わせください！</p>
+        </div>
+
+        <div data-lang="en">
+            <h2>Tutoring Lessons Offered</h2>
+            <h3>Target Students</h3>
+            <div class="target-grid">
+                <div class="target-card">
+                    <img src="assets/blocks.png" alt="Kindergarten">
+                    <h4>Kindergarten</h4>
+                </div>
+                <div class="target-card">
+                    <img src="assets/school-bag.png" alt="K-12 (Elementary to High School)">
+                    <h4>K-12 (Elementary to High School)</h4>
+                </div>
+                <div class="target-card">
+                    <img src="assets/graduation-cap.png" alt="University Students">
+                    <h4>University Students</h4>
+                </div>
+                <div class="target-card">
+                    <img src="assets/briefcase.png" alt="Working Adults">
+                    <h4>Working Adults</h4>
+                </div>
+            </div>
+
+            <h3>Goals</h3>
+            <ul class="goals-list">
+                <li>Feeling <strong>lost in school homework?</strong></li>
+                <li>A beginner speaker / nervous and lacking <strong>speaking confidence</strong>?</li>
+                <li>Looking to enjoy <strong>English conversation</strong>?</li>
+                <li>Want to develop <strong>native-like grammar intuition</strong>?</li>
+                <li><strong>Studying abroad or traveling</strong> soon, or a <strong>kikokushijo</strong> looking to maintain your English skills?</li>
+                <li>Learning <strong>academic / business English</strong> in STEM and engineering?</li>
+                <li>Looking for <strong>highly flexible</strong> English tutoring scheduling (offline / online)?</li>
+            </ul>
+            <p class="section-callout">Let's get you sorted out!</p>
+
+            <div class="specialty-header">
+                <h3>Lesson Specialties</h3>
+                <div class="carousel-controls" aria-label="Slide controls">
+                    <button type="button" class="carousel-btn prev" aria-label="Previous">&#8592;</button>
+                    <button type="button" class="carousel-btn next" aria-label="Next">&#8594;</button>
+                </div>
+            </div>
+            <div class="specialty-grid">
+                <div class="specialty-card">
+                    <div class="specialty-title">
+                        <img src="assets/exam.png" alt="Test Taking Prep">
+                        <strong>Test Taking Prep</strong>
+                    </div>
+                    <ul>
+                        <li>High school language proficiency exam prep (Eiken)</li>
+                        <li>Advanced language proficiency exam prep (TOEIC, TOEFL, IELTS, Duolingo English Test)</li>
+                        <li>University entrance exam prep (SAT)</li>
+                    </ul>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-title">
+                        <img src="assets/friend.png" alt="Conversation">
+                        <strong>Conversation</strong>
+                    </div>
+                    <ul>
+                        <li>Everyday conversation and free talk (natural expressions + slang &amp; idioms)</li>
+                        <li>Conversations for travel</li>
+                        <li>Pronunciation correction</li>
+                    </ul>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-title">
+                        <img src="assets/table.png" alt="Homework Help">
+                        <strong>Homework Help</strong>
+                    </div>
+                    <ul>
+                        <li>Drills and take-home exercises</li>
+                        <li>Exam and school textbook review</li>
+                        <li>Essay checking</li>
+                    </ul>
+                </div>
+                <div class="specialty-card">
+                    <div class="specialty-title">
+                        <img src="assets/salute.png" alt="Personalized Curriculum">
+                        <strong>Personalized Curriculum</strong>
+                    </div>
+                    <ul>
+                        <li>Customized lesson plans for foundational English grammar</li>
+                        <li>Grammar drills</li>
+                        <li>Progress tracking</li>
+                    </ul>
+                </div>
+            </div>
+            <p class="section-note">Looking for something not listed here? Send an inquiry, and let's talk about it!</p>
+        </div>
+    </div>
+
+    <div id="teaching-proficiency">
+        <div data-lang="jp">
+            <h2>指導経験・資格</h2>
+            <div class="two-col-split">
+                <div>
+                    <h3>指導歴</h3>
+                    <ul>
+                        <li>フリーランス英語講師（2026年〜現在）：高校生・大学生向けの個別指導</li>
+                        <li>英会話講師（2023年〜現在）：Alpha English School 日比野校</li>
+                        <li>特別支援向け英語講師（2023年〜2024年）：K-Y Style 東別院</li>
+                        <li>学部生チューター（2023年〜2026年）：名古屋大学 工学部 機械・航空宇宙工学科</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>スコア・資格</h3>
+                    <ul>
+                        <li>TOEFL iBT: 112 / 120（26R / 30L / 28W / 28S）</li>
+                        <li>SAT: 1500（Reading + Math）</li>
+                        <li>日本語能力試験（JLPT）N2（レッスンは英語メインですが、言葉に詰まった際の日本語サポートやニュアンスの解説が可能です）</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div data-lang="en">
+            <h2>Experiences</h2>
+            <div class="two-col-split">
+                <div>
+                    <h3>Teaching History</h3>
+                    <ul>
+                        <li>Private English Tutor (2026–Present): Private tutoring for high school and college students</li>
+                        <li>English as a Second Language Instructor (2023–Present): Alpha English School Hibino</li>
+                        <li>English Instructor for Special Needs Students (2023–2024): K-Y Style Higashi Betsuin</li>
+                        <li>Undergraduate Student Tutor (2023–2026): Nagoya University, Mechanical &amp; Aerospace Engineering Department</li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Test Scores &amp; Certifications</h3>
+                    <ul>
+                        <li>TOEFL iBT: 112 / 120 (26R / 30L / 28W / 28S)</li>
+                        <li>SAT: 1500 (Reading + Math)</li>
+                        <li>JLPT N2 (Lessons are conducted primarily in English, with Japanese support available for nuances and stuck moments)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="basic-info">
+        <div data-lang="jp">
+            <h2>基本情報</h2>
+            <table>
+                <tr>
+                    <th>項目</th>
+                    <th>詳細</th>
+                </tr>
+                <tr>
+                    <td>名前</td>
+                    <td>Gabriel Pascua Alteza（ガブリエル・パスクア・アルテザ）</td>
+                </tr>
+                <tr>
+                    <td>生年</td>
+                    <td>2003年</td>
+                </tr>
+                <tr>
+                    <td>居住地</td>
+                    <td>愛知県名古屋市</td>
+                </tr>
+                <tr>
+                    <td>国籍</td>
+                    <td>フィリピン</td>
+                </tr>
+                <tr>
+                    <td>言語スキル</td>
+                    <td>
+                        <div class="icon-list">
+                            <div class="icon-row">
+                                <img src="assets/united-states.png" alt="英語">
+                                <span>英語（ネイティブ）</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/japan.png" alt="日本語">
+                                <span>日本語（上級日常会話・JLPT N2）</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/philippines.png" alt="フィリピン語・タガログ語">
+                                <span>フィリピン語 / タガログ語（ネイティブ）</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>学歴</td>
+                    <td>
+                        <div class="icon-list">
+                            <div class="icon-row">
+                                <img src="assets/meidai.png" alt="名古屋大学">
+                                <span>2026年〜現在：名古屋大学大学院 工学研究科 機械システム工学専攻（修士課程）</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/meidai.png" alt="名古屋大学">
+                                <span>2022年〜2026年：名古屋大学 工学部 機械・航空宇宙工学科（学士号取得）</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/pisay.webp" alt="フィリピン科学高校">
+                                <span>2016年〜2022年：フィリピン科学高校 本校（Philippine Science High School - Main Campus）</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/meridian.jpeg" alt="Meridian International Learning Experience">
+                                <span>2010年〜2016年：Meridian International Learning Experience</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>専門分野</td>
+                    <td>
+                        <div class="icon-list">
+                            <div class="icon-row">
+                                <img src="assets/admin-panel.png" alt="制御システム工学">
+                                <span>制御システム工学</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/coding.png" alt="人工知能・機械学習">
+                                <span>人工知能（AI）・機械学習</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/robot.png" alt="ロボティクス・自動運転">
+                                <span>ロボティクス・自動運転制御</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>趣味・パーソナル</td>
+                    <td>
+                        <details class="trivia-toggle">
+                            <summary>趣味・好きなことを見る</summary>
+                            <ul>
+                                <li>性格タイプ：ENTP（知的好奇心旺盛で、幅広いテーマで楽しくお話しするのが好きです！）</li>
+                                <li>趣味・好きなこと：料理、筋トレ・ランニング、音楽・作曲、映画鑑賞・読書、ダンス、カラオケ</li>
+                                <li>好きな映画のジャンル：アクション、恋愛、ホラー、ディズニー</li>
+                                <li>好きな音楽のジャンル：洋楽、K-POP、ミュージカル</li>
+                                <li>好きな食べ物：イタリア料理</li>
+                                <li>日本の好きなところ：礼儀正しい人々、そして一風変わっていて見応えのある日本のアートとファッション</li>
+                            </ul>
+                        </details>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-lang="en">
+            <h2>Basic Information</h2>
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Information</th>
+                </tr>
+                <tr>
+                    <td>Name</td>
+                    <td>Gabriel Pascua Alteza</td>
+                </tr>
+                <tr>
+                    <td>Birth Year</td>
+                    <td>2003</td>
+                </tr>
+                <tr>
+                    <td>Location</td>
+                    <td>Nagoya, Japan</td>
+                </tr>
+                <tr>
+                    <td>Nationality</td>
+                    <td>Filipino</td>
+                </tr>
+                <tr>
+                    <td>Language Proficiency</td>
+                    <td>
+                        <div class="icon-list">
+                            <div class="icon-row">
+                                <img src="assets/united-states.png" alt="English">
+                                <span>English (Native)</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/japan.png" alt="Japanese">
+                                <span>Japanese (Advanced Conversational, JLPT N2)</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/philippines.png" alt="Filipino">
+                                <span>Filipino / Tagalog (Native)</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Education</td>
+                    <td>
+                        <div class="icon-list">
+                            <div class="icon-row">
+                                <img src="assets/meidai.png" alt="Nagoya University">
+                                <span>2026–Present: Nagoya University Graduate School of Engineering (Master's in Mechanical Systems Engineering)</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/meidai.png" alt="Nagoya University">
+                                <span>2022–2026: Nagoya University School of Engineering (Bachelor's in Mechanical &amp; Aerospace Engineering)</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/pisay.webp" alt="Philippine Science High School">
+                                <span>2016–2022: Philippine Science High School - Main Campus</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/meridian.jpeg" alt="Meridian International Learning Experience">
+                                <span>2010–2016: Meridian International Learning Experience</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Field of Study</td>
+                    <td>
+                        <div class="icon-list">
+                            <div class="icon-row">
+                                <img src="assets/admin-panel.png" alt="Control Systems Engineering">
+                                <span>Control Systems Engineering</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/coding.png" alt="Artificial Intelligence / Machine Learning">
+                                <span>Artificial Intelligence / Machine Learning</span>
+                            </div>
+                            <div class="icon-row">
+                                <img src="assets/robot.png" alt="Robotics &amp; Autonomous Driving">
+                                <span>Robotics &amp; Autonomous Driving</span>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Interests &amp; Favorites</td>
+                    <td>
+                        <details class="trivia-toggle">
+                            <summary>Show personal interests &amp; favorites</summary>
+                            <ul>
+                                <li>Personality Type: ENTP (Intellectually curious and love having engaging conversations across a wide range of topics!)</li>
+                                <li>Hobbies: Cooking, weightlifting &amp; running, music &amp; songwriting, movies &amp; reading, dance, karaoke</li>
+                                <li>Movie Genres: Action, romance, horror, Disney</li>
+                                <li>Music Genres: Western pop, K-pop, musical theater</li>
+                                <li>Favorite Food: Italian cuisine</li>
+                                <li>Favorite Things About Japan: Polite people, and Japan's unique, visually captivating art and fashion</li>
+                            </ul>
+                        </details>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="rates">
+        <div data-lang="jp">
+            <h2>レッスン詳細・料金</h2>
+            <div class="two-col-split">
+                <div>
+                    <h3>レッスン場所</h3>
+                    <p>対面（オフライン）レッスンは名古屋市内を中心に実施しています。オンラインレッスンはZoomなどのご希望のビデオ通話ツールに対応しています。</p>
+                </div>
+                <div>
+                    <h3>スケジュール</h3>
+                    <p>完全予約制です。空き状況についてはお気軽にお問い合わせください。</p>
+                </div>
+            </div>
+            <h3>料金表</h3>
+            <p>以下は基本料金です。生徒さんのご要望やスケジュールに応じて柔軟に調整可能です。</p>
+            <table>
+                <tr>
+                    <th>レッスン形態</th>
+                    <th>料金</th>
+                </tr>
+                <tr>
+                    <td>体験レッスン</td>
+                    <td>1,000円 / 1時間</td>
+                </tr>
+                <tr>
+                    <td>個人レッスン・対面（交通費別）</td>
+                    <td>3,500円 / 1時間</td>
+                </tr>
+                <tr>
+                    <td>個人レッスン・オンライン</td>
+                    <td>3,000円 / 1時間</td>
+                </tr>
+                <tr>
+                    <td>グループレッスン（対面の場合は交通費別 / オンライン可）</td>
+                    <td>2,500円（1名あたり） / 1時間</td>
+                </tr>
+            </table>
+        </div>
+
+        <div data-lang="en">
+            <h2>Lesson Details</h2>
+            <div class="two-col-split">
+                <div>
+                    <h3>Locations</h3>
+                    <p>Private offline lessons are offered within the Nagoya area, and online lessons are available through your preferred video conferencing tools.</p>
+                </div>
+                <div>
+                    <h3>Schedule</h3>
+                    <p>Lessons are available by appointment. Please contact me for current availability.</p>
+                </div>
+            </div>
+            <h3>Rates</h3>
+            <p>The following are the standard lesson rates, though they may vary depending on the student's specific needs and schedule.</p>
+            <table>
+                <tr>
+                    <th>Lesson Type</th>
+                    <th>Rate</th>
+                </tr>
+                <tr>
+                    <td>Trial Lesson</td>
+                    <td>¥1,000 / hr</td>
+                </tr>
+                <tr>
+                    <td>Private Offline Lesson (Excluding transportation costs)</td>
+                    <td>¥3,500 / hr</td>
+                </tr>
+                <tr>
+                    <td>Private Online Lesson</td>
+                    <td>¥3,000 / hr</td>
+                </tr>
+                <tr>
+                    <td>Group Lesson (Excluding transportation costs / Online)</td>
+                    <td>¥2,500 per student / hr</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="inquiry">
+        <div data-lang="jp">
+            <h2>お問い合わせ</h2>
+            <p>レッスンのご相談や体験のお申し込みは、以下の連絡先までお気軽にお問い合わせください。</p>
+            <table>
+                <tr>
+                    <th>連絡方法</th>
+                    <th>詳細</th>
+                </tr>
+                <tr>
+                    <td>メールアドレス</td>
+                    <td><a href="mailto:inquiry.alteza.gabriel@gmail.com">inquiry.alteza.gabriel@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>電話番号</td>
+                    <td>+81-**-****-5791（ご希望に応じて開示いたします）</td>
+                </tr>
+            </table>
+            <p>ご連絡を心よりお待ちしております！よろしくお願いいたします。</p>
+        </div>
+
+        <div data-lang="en">
+            <h2>Inquiries</h2>
+            <p>For any inquiries or lesson requests, please feel free to reach out through the following methods.</p>
+            <table>
+                <tr>
+                    <th>Field</th>
+                    <th>Information</th>
+                </tr>
+                <tr>
+                    <td>Email</td>
+                    <td><a href="mailto:inquiry.alteza.gabriel@gmail.com">inquiry.alteza.gabriel@gmail.com</a></td>
+                </tr>
+                <tr>
+                    <td>Phone</td>
+                    <td>+81-**-****-5791 (Disclosed upon request)</td>
+                </tr>
+            </table>
+            <p>I look forward to hearing from you! Thank you very much for your interest!</p>
+        </div>
+    </div>
+
+    <script>
+        const toggleBtn = document.getElementById('lang-toggle');
+        const nav = document.querySelector('nav');
+        const sections = document.querySelectorAll('#hero-intro, #lessons, #teaching-proficiency, #basic-info, #rates, #inquiry');
+        let currentSectionId = 'hero-intro';
+
+        // Create sliding pill indicators inside both JP and EN nav lists
+        document.querySelectorAll('nav ul').forEach((ul) => {
+            const indicator = document.createElement('span');
+            indicator.className = 'nav-indicator';
+            ul.appendChild(indicator);
+        });
+
+        function updateNavHighlight(sectionId, instant = false) {
+            currentSectionId = sectionId;
+            const isEn = document.body.classList.contains('lang-en');
+            const activeList = document.querySelector(`nav ul[data-lang="${isEn ? 'en' : 'jp'}"]`);
+            if (!activeList) return;
+
+            const indicator = activeList.querySelector('.nav-indicator');
+            const links = activeList.querySelectorAll('a');
+            let activeLink = null;
+
+            links.forEach((link) => {
+                const matches = link.getAttribute('href') === `#${sectionId}`;
+                link.classList.toggle('active', matches);
+                if (matches) activeLink = link;
+            });
+
+            if (activeLink && indicator) {
+                if (instant) indicator.style.transition = 'none';
+                indicator.style.width = `${activeLink.offsetWidth}px`;
+                indicator.style.transform = `translateX(${activeLink.offsetLeft}px)`;
+                indicator.style.opacity = '1';
+
+                if (instant) {
+                    indicator.offsetHeight; // force reflow
+                    indicator.style.transition = '';
+                }
+
+                // Auto-center active link inside scrollable mobile nav
+                const scrollTarget = activeLink.offsetLeft - (nav.clientWidth / 2) + (activeLink.offsetWidth / 2);
+                nav.scrollTo({ left: scrollTarget, behavior: instant ? 'auto' : 'smooth' });
+            }
+        }
+
+        // Language toggle
+        toggleBtn.addEventListener('click', () => {
+            const isEn = document.body.classList.toggle('lang-en');
+            document.documentElement.lang = isEn ? 'en' : 'ja';
+            updateNavHighlight(currentSectionId, true);
+        });
+
+        // Smooth scroll-spy using IntersectionObserver
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    updateNavHighlight(entry.target.id);
+                }
+            });
+        }, {
+            rootMargin: '-25% 0px -60% 0px',
+            threshold: 0
+        });
+
+        sections.forEach((section) => observer.observe(section));
+
+        // Recalculate pill width on window resize & initial load
+        window.addEventListener('resize', () => updateNavHighlight(currentSectionId, true));
+        window.addEventListener('DOMContentLoaded', () => updateNavHighlight('hero-intro', true));
+
+        // Mobile carousel arrow buttons for Lesson Specialties
+        document.querySelectorAll('.specialty-header').forEach((header) => {
+            const track = header.nextElementSibling;
+            const prevBtn = header.querySelector('.prev');
+            const nextBtn = header.querySelector('.next');
+            if (!track || !prevBtn || !nextBtn) return;
+
+            prevBtn.addEventListener('click', () => {
+                track.scrollBy({ left: -280, behavior: 'smooth' });
+            });
+            nextBtn.addEventListener('click', () => {
+                track.scrollBy({ left: 280, behavior: 'smooth' });
+            });
+        });
+    </script>
+</body>
+</html>
